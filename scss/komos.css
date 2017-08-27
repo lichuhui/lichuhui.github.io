@@ -5941,6 +5941,9 @@ $border-color: $gray-lighter;
   width: 8rem;
   height: 8rem; }
 
+#sidebar_container #tags .card-block {
+  padding: 0; }
+
 #sidebar_container #categories .card-block {
   padding: 0; }
   #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count {
@@ -5955,6 +5958,21 @@ $border-color: $gray-lighter;
   .filter-form input {
     border: 0;
     background: transparent; }
+
+#tag-cloud {
+  width: 25rem;
+  height: 25rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  #tag-cloud .tag-cloud-span {
+    cursor: pointer;
+    transition: text-shadow 0.1s ease, opacity 0.1s ease;
+    -webkit-transition: text-shadow 0.1s ease, opacity 0.1s ease;
+    -ms-transition: text-shadow 0.1s ease, opacity 0.1s ease; }
+    #tag-cloud .tag-cloud-span:hover {
+      text-shadow: 0 0 0.1rem, 0 0 0.1rem #343a40, 0 0 0.1rem #343a40, 0 0 0.1rem #343a40;
+      opacity: 0.9; }
 
 .jquery-accordion-menu, .jquery-accordion-menu * {
   box-sizing: border-box;
@@ -6548,9 +6566,16 @@ rem是相对于根元素<html>，这样就意味着，我们只需要在根元�
  */
 html {
   font-size: 62.5%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background-color: #343a40; }
 
 body {
   font-size: 1.6rem;
   overflow-x: hidden;
   background-color: #f8f9fa; }
+
+#tag-cloud-container #tag-cloud > span {
+  cursor: pointer;
+  transition: text-shadow 1s ease, opacity 1s ease;
+  -webkit-transition: text-shadow 1s ease, opacity 1s ease;
+  -ms-transition: text-shadow 1s ease, opacity 1s ease; }

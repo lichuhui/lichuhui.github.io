@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="/vendor/drop/css/drop-theme-arrows-bounce.min.css">
 <link rel="stylesheet" href="/vendor/prism/css/prism.css">
+<link rel="stylesheet" href="/vendor/microtip/microtip.min.css">
 <link rel="stylesheet" href="/scss/komos.css">
     
 </head>
@@ -101,9 +102,9 @@
                     <div class="timeline-content">
                         <div class="circle"><span><i class="fa fa-comments"></i></span></div>
                         <div class="content">
-                            <span class="time">2017-08-25</span>
-                            <h4 class="title">发布博客初稿</h4>
-                            <p class="description">成功发布本博客的初稿到Github。</p>
+                            <span class="time">2017-08-28</span>
+                            <h4 class="title">添加标签云</h4>
+                            <p class="description">基于wordcloud2.js添加标签云显示效果。</p>
                             <div class="icon"><span></span></div>
                         </div>
                     </div>
@@ -194,19 +195,14 @@
         标签
     </div>
     <div class="card-block">
-        
-            
-                <a href="/tags/Hello/"><span class="badge badge-pill badge-secondary">Hello</span></a>
-            
-                <a href="/tags/Hexo2/"><span class="badge badge-pill badge-secondary">Hexo2</span></a>
-            
-                <a href="/tags/标签2/"><span class="badge badge-pill badge-secondary">标签2</span></a>
-            
-                <a href="/tags/标签3/"><span class="badge badge-pill badge-secondary">标签3</span></a>
-            
-                <a href="/tags/标签1/"><span class="badge badge-pill badge-secondary">标签1</span></a>
-            
-        
+        <div id="tag-cloud-container">
+    <div id="tag-cloud"></div>
+    <script>
+        if (window.TAG_CLOUD_LIST === undefined) {
+          var TAG_CLOUD_LIST = [["标签3",3],["标签2",2],["贾环",1],["#F012BE",1],["#2ECC40",1],["#01FF70",1],["#85144B",1],["#001F3F",1],["#3D9970",1],["#FF851B",1],["#B10DC9",1],["#FF4136",1],["#DDDDDD",1],["#AAAAAA",1],["#39CCCC",1],["#FFDC00",1],["FFFFFF",1],["000000",1],["7FDBFF",1],["0074D9",1],["F012BE",1],["2ECC40",1],["01FF70",1],["85144B",1],["001F3F",1],["3D9970",1],["FF851B",1],["B10DC9",1],["FF4136",1],["DDDDDD",1],["AAAAAA",1],["39CCCC",1],["FFDC00",1],["brand-whit",1],["brand-blac",1],["brand-aqua",1],["brand-blue",1],["brand-fuch",1],["brand-gree",1],["brand-lime",1],["brand-maro",1],["brand-navy",1],["brand-oliv",1],["brand-oran",1],["brand-purp",1],["brand-red:",1],["brand-silv",1],["brand-gray",1],["brand-teal",1],["brand-yell",1],["标签1",1],["#000000",1],["#0074D9",1],["林黛玉",1],["薛宝钗",1],["贾元春",1],["贾迎春",1],["贾探春",1],["贾惜春",1],["李纨",1],["妙玉",1],["史湘云",1],["王熙凤",1],["贾巧姐",1],["秦可卿",1],["晴雯",1],["麝月",1],["袭人",1],["鸳鸯",1],["雪雁",1],["紫鹃'碧痕",1],["平儿",1],["香菱",1],["金钏",1],["司棋",1],["抱琴",1],["赖大",1],["焦大",1],["王善保",1],["周瑞",1],["林之孝",1],["乌进孝",1],["包勇",1],["吴贵",1],["吴新登",1],["邓好时",1],["王柱儿",1],["余信",1],["庆儿",1],["昭儿",1],["兴儿",1],["隆儿",1],["坠儿",1],["喜儿",1],["寿儿",1],["丰儿",1],["住儿",1],["小舍儿",1],["李十儿",1],["玉柱儿",1]];
+        }
+    </script>
+</div>
     </div>
 </div>
     <div id="categories" class="card">
@@ -259,6 +255,8 @@
 <script src="/js/jquery-qrcode-0.14.0.min.js"></script>
 <script src="/js/jquery-accordion-menu.js"></script>
 <script src="/js/category-list.js"></script>
+<script src="/js/wordcloud2.js"></script>
+<script src="/js/tag-cloud.js"></script>
     
 </div>
     </footer>
