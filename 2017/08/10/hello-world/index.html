@@ -25,20 +25,23 @@
     <meta name="msapplication-TileImage" content="/images/icons/mstile-144x144.png">
     <!-- Bootstrap CSS -->
     <!--<link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">-->
+    <!-- Fancybox CSS -->
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="/vendor/tether/tether.min.css">
 <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="/vendor/drop/css/drop-theme-arrows-bounce.min.css">
-<link rel="stylesheet" href="/vendor/prism/css/prism.css">
 <link rel="stylesheet" href="/vendor/microtip/microtip.min.css">
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.min.css">
 <link rel="stylesheet" href="/scss/komos.css">
     
-    <!-- Gitment -->
     
+        <link rel="stylesheet" href="/vendor/prism/css/prism-theme-okaidia.css">
         
-
+            <link rel="stylesheet" href="/vendor/prism/plugins/line-numbers/prism-line-numbers.css">
         
     
 
+    
 </head>
 <body style="padding-top: 7rem;">
     
@@ -424,16 +427,21 @@
     </section>
     <section class="article-more" itemprop="articleBody">
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="language-bash">$ hexo new &quot;My New Post&quot;
+<h2>Quick Start</h2>
+<h3>Create a new post</h3>
+<pre><code class="language-language-bash">$ hexo new &quot;My New Post&quot;
 </code></pre>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="language-bash">$ hexo server
+<h3>Run server</h3>
+<pre><code class="language-language-bash">$ hexo server
 </code></pre>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="language-bash">$ hexo generate
+<h3>Generate static files</h3>
+<pre><code class="language-language-bash">$ hexo generate
 </code></pre>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="language-bash">$ hexo deploy
+<h3>Deploy to remote sites</h3>
+<pre><code class="language-language-bash">$ hexo deploy
 </code></pre>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
@@ -443,7 +451,7 @@
         <div id="post_nav" class="clearfix">
     
         <a href="/2017/08/17/hello-hexo/" class="pull-left">
-            <i class="fa fa-backward" aria-hidden="true"></i>&nbsp;上一篇
+            Hello Hexo&nbsp;&nbsp;<i class="fa fa-backward" aria-hidden="true"></i>&nbsp;&nbsp;上一篇
         </a>
     
     
@@ -459,13 +467,6 @@
     </div>
 </div>
         
-    <!-- Gitment -->
-    
-        
-            <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDQyOS82OTgz"></div>
-        
-    
-
     </footer>
 </article>
 
@@ -510,7 +511,8 @@
         </nav>
     </div>
 
-    <div id="tags" class="card">
+    
+        <div id="tags" class="card">
     <div class="card-header">
         标签
     </div>
@@ -518,31 +520,34 @@
         <div id="tag-cloud-container">
     <div id="tag-cloud"></div>
     <script>
-        if (window.TAG_CLOUD_LIST === undefined) {
-          var TAG_CLOUD_LIST = [["标签3",3],["标签2",2],["贾环",1],["#F012BE",1],["#2ECC40",1],["#01FF70",1],["#85144B",1],["#001F3F",1],["#3D9970",1],["#FF851B",1],["#B10DC9",1],["#FF4136",1],["#DDDDDD",1],["#AAAAAA",1],["#39CCCC",1],["#FFDC00",1],["FFFFFF",1],["000000",1],["7FDBFF",1],["0074D9",1],["F012BE",1],["2ECC40",1],["01FF70",1],["85144B",1],["001F3F",1],["3D9970",1],["FF851B",1],["B10DC9",1],["FF4136",1],["DDDDDD",1],["AAAAAA",1],["39CCCC",1],["FFDC00",1],["brand-whit",1],["brand-blac",1],["brand-aqua",1],["brand-blue",1],["brand-fuch",1],["brand-gree",1],["brand-lime",1],["brand-maro",1],["brand-navy",1],["brand-oliv",1],["brand-oran",1],["brand-purp",1],["brand-red:",1],["brand-silv",1],["brand-gray",1],["brand-teal",1],["brand-yell",1],["标签1",1],["#000000",1],["#0074D9",1],["林黛玉",1],["薛宝钗",1],["贾元春",1],["贾迎春",1],["贾探春",1],["贾惜春",1],["李纨",1],["妙玉",1],["史湘云",1],["王熙凤",1],["贾巧姐",1],["秦可卿",1],["晴雯",1],["麝月",1],["袭人",1],["鸳鸯",1],["雪雁",1],["紫鹃'碧痕",1],["平儿",1],["香菱",1],["金钏",1],["司棋",1],["抱琴",1],["赖大",1],["焦大",1],["王善保",1],["周瑞",1],["林之孝",1],["乌进孝",1],["包勇",1],["吴贵",1],["吴新登",1],["邓好时",1],["王柱儿",1],["余信",1],["庆儿",1],["昭儿",1],["兴儿",1],["隆儿",1],["坠儿",1],["喜儿",1],["寿儿",1],["丰儿",1],["住儿",1],["小舍儿",1],["李十儿",1],["玉柱儿",1]];
+        if (window.TAG_CLOUD_DATA === undefined) {
+          var TAG_CLOUD_DATA = {"tagArray":[["乌进孝",3],["彩云",3],["贾元春",3],["贾迎春",3],["贾探春",3],["贾惜春",3],["妙玉",3],["史湘云",3],["王熙凤",3],["晴雯",3],["袭人",3],["鸳鸯",3],["雪雁",3],["金钏",3],["司棋",3],["抱琴",3],["薛宝钗",3],["小舍儿",3],["贾敬",3],["贾赦",3]],"tagPathMap":{"乌进孝":"tags/乌进孝/","彩云":"tags/彩云/","贾元春":"tags/贾元春/","贾迎春":"tags/贾迎春/","贾探春":"tags/贾探春/","贾惜春":"tags/贾惜春/","妙玉":"tags/妙玉/","史湘云":"tags/史湘云/","王熙凤":"tags/王熙凤/","晴雯":"tags/晴雯/","袭人":"tags/袭人/","鸳鸯":"tags/鸳鸯/","雪雁":"tags/雪雁/","金钏":"tags/金钏/","司棋":"tags/司棋/","抱琴":"tags/抱琴/","薛宝钗":"tags/薛宝钗/","小舍儿":"tags/小舍儿/","贾敬":"tags/贾敬/","贾赦":"tags/贾赦/"}};
         }
     </script>
 </div>
     </div>
 </div>
-    <div id="categories" class="card">
+    
+    
+        <div id="categories" class="card">
     <div class="card-header">
         分类
     </div>
     <div class="card-block">
         <div id="jquery-accordion-menu" class="jquery-accordion-menu white">
-            <div class="jquery-accordion-menu-header">
-                <form id="filter-form" class="filter-form" action="return false;">
-                    <input id="jquery-accordion-menu-filter-input" type="text" class="form-control" placeholder="过滤分类...">
-                </form>
-            </div>
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/分类1/">分类1</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/分类1/分类2/">分类2</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/分类1/分类2/Hexo/">Hexo</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/分类2/">分类2</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/分类2/分类1/">分类1</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/分类2/分类1/Hello/">Hello</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/分类2/分类3/">分类3</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/分类2/分类3/Hexo/">Hexo</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
-            <!--<div class="jquery-accordion-menu-footer">
-                Footer
-            </div>-->
-        </div>
+    <div class="jquery-accordion-menu-header">
+        <form id="filter-form" class="filter-form" action="return false;">
+            <input id="jquery-accordion-menu-filter-input" type="text" class="form-control" placeholder="过滤分类...">
+        </form>
+    </div>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/分类1/">分类1</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/分类1/分类2/">分类2</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/分类1/分类2/Hexo/">Hexo</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/分类2/">分类2</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/分类2/分类1/">分类1</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/分类2/分类1/Hello/">Hello</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/分类2/分类3/">分类3</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/分类2/分类3/Hexo/">Hexo</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/UI/">UI</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/UI/Vue/">Vue</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+    <!--<div class="jquery-accordion-menu-footer">
+        Footer
+    </div>-->
+</div>
     </div>
 </div>
+    
 </div>
             </aside>
         </div>
@@ -564,19 +569,34 @@
             crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
     -->
     <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
 <script src="/vendor/tether/tether.min.js"></script>
 <script src="/vendor/bootstrap/bootstrap.min.js"></script>
 <script src="/vendor/drop/js/drop.min.js"></script>
-<script src="/vendor/prism/js/prism.js"></script>
+<script src="/vendor/fancybox/jquery.fancybox.min.js"></script>
 <script src="/js/offcanvas.js"></script>
 <script src="/js/siderbar_social_qrcode_tip.js"></script>
 <script src="/js/jquery-qrcode-0.14.0.min.js"></script>
 <script src="/js/jquery-accordion-menu.js"></script>
 <script src="/js/category-list.js"></script>
-<script src="/js/wordcloud2.js"></script>
+<script src="/vendor/wordcloud2/wordcloud2.js"></script>
 <script src="/js/tag-cloud.js"></script>
+<script src="/js/komos.js"></script>
+    
+    
+        <script src="/vendor/prism/js/prism.js"></script>
+        
+            <script src="/vendor/prism/plugins/line-numbers/prism-line-numbers.js"></script>
+        
+        
+            <link rel="stylesheet" href="/vendor/prism/plugins/toolbar/prism-toolbar.css">
+            <script src="/vendor/prism/plugins/toolbar/prism-toolbar.js"></script>
+<script src="/vendor/prism/plugins/copy-to-clipboard/prism-copy-to-clipboard.js"></script>
+        
+    
+
     
 </div>
     </footer>

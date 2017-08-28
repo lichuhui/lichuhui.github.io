@@ -37,7 +37,7 @@
     page-break-after: avoid; }
   .navbar {
     display: none; }
-  .badge, #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count {
+  .badge, #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count, #content #categories .card-block .category-list .category-list-item .category-list-count {
     border: 1px solid #000; }
   .table {
     border-collapse: collapse !important; }
@@ -2783,7 +2783,7 @@ tbody.collapse.show {
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem; }
 
-.badge, #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count {
+.badge, #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count, #content #categories .card-block .category-list .category-list-item .category-list-count {
   display: inline-block;
   padding: 0.25em 0.4em;
   font-size: 75%;
@@ -2794,14 +2794,14 @@ tbody.collapse.show {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25rem; }
-  .badge:empty, #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count:empty {
+  .badge:empty, #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count:empty, #content #categories .card-block .category-list .category-list-item .category-list-count:empty {
     display: none; }
 
-.btn .badge, .btn #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count, #sidebar_container #categories .card-block .category-list .category-list-item .btn .category-list-count {
+.btn .badge, .btn #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count, #sidebar_container #categories .card-block .category-list .category-list-item .btn .category-list-count, .btn #content #categories .card-block .category-list .category-list-item .category-list-count, #content #categories .card-block .category-list .category-list-item .btn .category-list-count {
   position: relative;
   top: -1px; }
 
-.badge-pill, #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count {
+.badge-pill, #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count, #content #categories .card-block .category-list .category-list-item .category-list-count {
   padding-right: 0.6em;
   padding-left: 0.6em;
   border-radius: 10rem; }
@@ -2830,10 +2830,10 @@ tbody.collapse.show {
     text-decoration: none;
     background-color: #1e7e34; }
 
-.badge-info, #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count {
+.badge-info, #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count, #content #categories .card-block .category-list .category-list-item .category-list-count {
   color: #fff;
   background-color: #17a2b8; }
-  .badge-info[href]:focus, #sidebar_container #categories .card-block .category-list .category-list-item [href].category-list-count:focus, .badge-info[href]:hover, #sidebar_container #categories .card-block .category-list .category-list-item [href].category-list-count:hover {
+  .badge-info[href]:focus, #sidebar_container #categories .card-block .category-list .category-list-item [href].category-list-count:focus, #content #categories .card-block .category-list .category-list-item [href].category-list-count:focus, .badge-info[href]:hover, #sidebar_container #categories .card-block .category-list .category-list-item [href].category-list-count:hover, #content #categories .card-block .category-list .category-list-item [href].category-list-count:hover {
     color: #fff;
     text-decoration: none;
     background-color: #117a8b; }
@@ -4302,7 +4302,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .float-left {
   float: left !important; }
 
-.float-right, #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count {
+.float-right, #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count, #content #categories .card-block .category-list .category-list-item .category-list-count {
   float: right !important; }
 
 .float-none {
@@ -5686,34 +5686,6 @@ a.text-dark:focus, a.text-dark:hover {
 .invisible {
   visibility: hidden !important; }
 
-/* use bootstrap color system
-// 定义颜色列表
-$brand-white:               #FFFFFF;
-$brand-black:               #000000;
-$brand-aqua:                #7FDBFF;
-$brand-blue:                #0074D9;
-$brand-fuchsia:             #F012BE;
-$brand-green:               #2ECC40;
-$brand-lime:                #01FF70;
-$brand-maroon:              #85144B;
-$brand-navy:                #001F3F;
-$brand-olive:               #3D9970;
-$brand-orange:              #FF851B;
-$brand-purple:              #B10DC9;
-$brand-red:                 #FF4136;
-$brand-silver:              #DDDDDD;
-$brand-gray:                #AAAAAA;
-$brand-teal:                #39CCCC;
-$brand-yellow:              #FFDC00;
-
-// 定义灰色色系
-$gray-dark:                 #757575;
-$gray-light:                #bdbdbd;
-$gray-lighter:              #e0e0e0;
-$gray-lightest:             #eeeeee;
-
-$border-color: $gray-lighter;
-*/
 #logo-wrap {
   flex: 0 4rem; }
 
@@ -5773,6 +5745,16 @@ $border-color: $gray-lighter;
     width: 50%;
     /* 6 columns */ } }
 
+blockquote {
+  border: solid 0.1rem #dee2e6;
+  border-left: solid 0.25rem #0074D9;
+  border-radius: 0.25rem;
+  background-color: #e9ecef;
+  margin: 1rem auto; }
+  blockquote p {
+    padding: 1rem;
+    margin: 0; }
+
 .article {
   margin-bottom: 1.4rem;
   padding: 0.8rem;
@@ -5808,9 +5790,14 @@ $border-color: $gray-lighter;
     color: #dee2e6; }
 
 .article-excerpt.excerpt {
-  background-color: #e9ecef;
-  color: #495057;
-  padding: 0.5rem; }
+  border: solid 0.1rem #dee2e6;
+  border-left: solid 0.25rem #adb5bd;
+  border-radius: 0.25rem;
+  background-color: white;
+  margin: 1rem auto; }
+  .article-excerpt.excerpt p {
+    padding: 1rem;
+    overflow: hidden; }
 
 .article-footer {
   padding-top: 0.2rem; }
@@ -5909,13 +5896,13 @@ $border-color: $gray-lighter;
   40% {
     transform: scaleX(0); } }
 
-#sidebar_container .card {
+#sidebar_container .card, #content .card {
   margin-bottom: 1rem; }
-  #sidebar_container .card .card-header {
+  #sidebar_container .card .card-header, #content .card .card-header {
     font-weight: bold; }
-  #sidebar_container .card .card-block {
+  #sidebar_container .card .card-block, #content .card .card-block {
     padding: 0.5rem; }
-  #sidebar_container .card::before {
+  #sidebar_container .card::before, #content .card::before {
     background: url(../../images/shadow-right.png) bottom left no-repeat;
     content: '';
     display: block;
@@ -5924,7 +5911,7 @@ $border-color: $gray-lighter;
     position: absolute;
     bottom: -0.75rem;
     right: -2rem; }
-  #sidebar_container .card::after {
+  #sidebar_container .card::after, #content .card::after {
     background: url(../../images/shadow-left.png) bottom right no-repeat;
     content: '';
     display: block;
@@ -5934,19 +5921,19 @@ $border-color: $gray-lighter;
     bottom: -0.95rem;
     left: -3rem; }
 
-#sidebar_container #card.card .nav {
+#sidebar_container #card.card .nav, #content #card.card .nav {
   border-top: solid thin #e9ecef; }
 
-#sidebar_container #card.card .card-block .rounded-circle {
+#sidebar_container #card.card .card-block .rounded-circle, #content #card.card .card-block .rounded-circle {
   width: 8rem;
   height: 8rem; }
 
-#sidebar_container #tags .card-block {
+#sidebar_container #tags .card-block, #content #tags .card-block {
   padding: 0; }
 
-#sidebar_container #categories .card-block {
+#sidebar_container #categories .card-block, #content #categories .card-block {
   padding: 0; }
-  #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count {
+  #sidebar_container #categories .card-block .category-list .category-list-item .category-list-count, #content #categories .card-block .category-list .category-list-item .category-list-count {
     margin-right: 2rem; }
 
 .drop-element.drop-theme-arrows-bounce .drop-content {
