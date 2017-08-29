@@ -1,5 +1,5 @@
 (function($) {
-  const $sidebar_categories = $('#sidebar_container > #categories');
+  const $sidebar_categories = $('#sidebar > #categories');
   const $content_categories = $('#content > #categories');
   const CATEGORY_LIST = {
     _filterList: function ($list) {
@@ -40,14 +40,8 @@
   if ($content_categories.length > 0) {
     const $accordionMenu = $content_categories.find('#jquery-accordion-menu');
     const $ele = $accordionMenu.find('.category-list:first');
-    if ($sidebar_categories.length > 0) {
-      $sidebar_categories.slideUp('fast',function(){
-        $(this).remove();
-        CATEGORY_LIST._buildMenu($accordionMenu, $ele);
-      });
-    } else {
-      CATEGORY_LIST._buildMenu($accordionMenu, $ele);
-    }
+    $sidebar_categories.remove();
+    CATEGORY_LIST._buildMenu($accordionMenu, $ele);
   } else {
     const $accordionMenu = $sidebar_categories.find('#jquery-accordion-menu');
     const $ele = $accordionMenu.find('.category-list:first');

@@ -1,9 +1,14 @@
 $(document).ready(function () {
-  const $sidebar_tags = $('#sidebar_container > #tags');
+  const $sidebar_tags = $('#sidebar > #tags');
   const $content_tags = $('#content > #tags');
   const $tag_cloud = $content_tags.length > 0 ? $content_tags.find('#tag-cloud') : $sidebar_tags.find('#tag-cloud');
   const tagPathMap = TAG_CLOUD_DATA.tagPathMap;
   const $root_path_for_tag = $('#root-path-for-tag');
+
+  if ($content_tags.length > 0) {
+    $sidebar_tags.remove();
+  }
+
   const TAG_CLOUD = {
     _$tags: $content_tags.length > 0 ? $content_tags : $sidebar_tags,
     _$tagCloud: $tag_cloud,
@@ -49,18 +54,9 @@ $(document).ready(function () {
       TAG_CLOUD._generateTagCloud();
     }
   };
-  if ($content_tags.length > 0) {
-    if ($sidebar_tags.length > 0) {
-      $sidebar_tags.slideUp('fast',function(){
-        $(this).remove();
-        TAG_CLOUD._buildTagCloud();
-      });
-    } else {
-      TAG_CLOUD._buildTagCloud();
-    }
-  } else {
-    TAG_CLOUD._buildTagCloud();
-  }
+
+  TAG_CLOUD._buildTagCloud();
+
   $(window).resize(function(){
     TAG_CLOUD._$tagCloud.empty();
     TAG_CLOUD._buildTagCloud();
