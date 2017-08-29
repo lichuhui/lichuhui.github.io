@@ -1,11 +1,11 @@
 $(document).ready(function () {
   const $sidebar_tags = $('#sidebar_container > #tags');
   const $content_tags = $('#content > #tags');
-  const $tag_cloud = $sidebar_tags.length > 0 ? $sidebar_tags.find('#tag-cloud') : $content_tags.find('#tag-cloud');
+  const $tag_cloud = $content_tags.length > 0 ? $content_tags.find('#tag-cloud') : $sidebar_tags.find('#tag-cloud');
   const tagPathMap = TAG_CLOUD_DATA.tagPathMap;
   const $root_path_for_tag = $('#root-path-for-tag');
   const TAG_CLOUD = {
-    _$tags: $sidebar_tags.length > 0 ? $sidebar_tags : $content_tags,
+    _$tags: $content_tags.length > 0 ? $content_tags : $sidebar_tags,
     _$tagCloud: $tag_cloud,
     _reSize: function () {
       var mw = this._$tags.innerWidth() - 14;
