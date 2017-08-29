@@ -1,10 +1,12 @@
 $(document).ready(function () {
-  const $container = $('#tag-cloud-container');
-  const $tagCloud = $('#tag-cloud');
+  const $sidebar_tags = $('#sidebar_container > #tags');
+  const $content_tags = $('#content > #tags');
+  const $tag_cloud = $sidebar_tags.length > 0 ? $sidebar_tags.find('#tag-cloud') : $content_tags.find('#tag-cloud');
   const tagPathMap = TAG_CLOUD_DATA.tagPathMap;
+  const $root_path_for_tag = $('#root-path-for-tag');
   const TAG_CLOUD = {
-    _$tags: $container,
-    _$tagCloud: $tagCloud,
+    _$tags: $sidebar_tags.length > 0 ? $sidebar_tags : $content_tags,
+    _$tagCloud: $tag_cloud,
     _reSize: function () {
       var mw = this._$tags.innerWidth() - 14;
       var w = TAG_CLOUD_DATA.tagArray.length * 10;
@@ -13,7 +15,7 @@ $(document).ready(function () {
       this._$tagCloud.css({'width': w, 'height': w});
     },
     _generateTagCloud: function () {
-      WordCloud($tagCloud[0], {
+      WordCloud($tag_cloud[0], {
         list: TAG_CLOUD_DATA.tagArray,
         gridSize: 8,
         minSize: '1rem',
@@ -30,7 +32,7 @@ $(document).ready(function () {
         hover: function (item) {
           if (item) {
             const tip = item[0] + '【' + item[1] + '篇文章】'
-            const $span = $tagCloud.find('span:contains("' + item[0] + '")');
+            const $span = $tag_cloud.find('span:contains("' + item[0] + '")');
             $span.attr('aria-label', tip);
             $span.attr('data-microtip-position', 'top');
             $span.attr('role', 'tooltip');
@@ -38,16 +40,29 @@ $(document).ready(function () {
         },
         click: function(item) {
           if (item) {
-            window.location.href = '/' + tagPathMap[item[0]];
+            window.location.href = $root_path_for_tag.val() + tagPathMap[item[0]];
           }
         }});
     },
+    _buildTagCloud: function () {
+      TAG_CLOUD._reSize();
+      TAG_CLOUD._generateTagCloud();
+    }
   };
-  TAG_CLOUD._reSize();
-  TAG_CLOUD._generateTagCloud();
+  if ($content_tags.length > 0) {
+    if ($sidebar_tags.length > 0) {
+      $sidebar_tags.slideUp('fast',function(){
+        $(this).remove();
+        TAG_CLOUD._buildTagCloud();
+      });
+    } else {
+      TAG_CLOUD._buildTagCloud();
+    }
+  } else {
+    TAG_CLOUD._buildTagCloud();
+  }
   $(window).resize(function(){
     TAG_CLOUD._$tagCloud.empty();
-    TAG_CLOUD._reSize();
-    TAG_CLOUD._generateTagCloud();
+    TAG_CLOUD._buildTagCloud();
   });
 });

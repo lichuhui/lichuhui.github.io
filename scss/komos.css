@@ -5946,20 +5946,25 @@ blockquote {
     border: 0;
     background: transparent; }
 
-#tag-cloud {
+#tag-cloud-container #tag-cloud {
   width: 25rem;
   height: 25rem;
   display: block;
   margin-left: auto;
   margin-right: auto; }
-  #tag-cloud .tag-cloud-span {
+  #tag-cloud-container #tag-cloud .tag-cloud-span {
     cursor: pointer;
     transition: text-shadow 0.1s ease, opacity 0.1s ease;
     -webkit-transition: text-shadow 0.1s ease, opacity 0.1s ease;
     -ms-transition: text-shadow 0.1s ease, opacity 0.1s ease; }
-    #tag-cloud .tag-cloud-span:hover {
+    #tag-cloud-container #tag-cloud .tag-cloud-span:hover {
       text-shadow: 0 0 0.1rem, 0 0 0.1rem #343a40, 0 0 0.1rem #343a40, 0 0 0.1rem #343a40;
       opacity: 0.9; }
+  #tag-cloud-container #tag-cloud span {
+    cursor: pointer;
+    transition: text-shadow 1s ease, opacity 1s ease;
+    -webkit-transition: text-shadow 1s ease, opacity 1s ease;
+    -ms-transition: text-shadow 1s ease, opacity 1s ease; }
 
 .jquery-accordion-menu, .jquery-accordion-menu * {
   box-sizing: border-box;
@@ -6560,9 +6565,3 @@ body {
   font-size: 1.6rem;
   overflow-x: hidden;
   background-color: #f8f9fa; }
-
-#tag-cloud-container #tag-cloud > span {
-  cursor: pointer;
-  transition: text-shadow 1s ease, opacity 1s ease;
-  -webkit-transition: text-shadow 1s ease, opacity 1s ease;
-  -ms-transition: text-shadow 1s ease, opacity 1s ease; }
